@@ -1,24 +1,15 @@
 <?php
-
 require 'autoloader.php';
 
-$hamac = new Produit; //myAutoloader ("Produit")
-$hamac->setName('Hamac');
-$hamac->setDescription('Pour se reposer après une semaine de PHP');
-$hamac->setImageName('hamac.jpg');
-$hamac->setPrice(25);
-
-$parasol = new Produit;
-$parasol->setName('parasol');
-$parasol->setDescription('Pour éviter les UV');
-$parasol->setImageName('parasol.jpg');
-$parasol->setPrice(-58);
-
-$produits = [$hamac, $parasol];
+$bdd = new PDO('mysql:host=localhost;dbname=catalogue2', 'root');
+$sql = 'SELECT * FROM produit WHERE publication_state = 1';
+$result = $bdd->query($sql);
+$produits = $result->fetchAll(PDO::FETCH_CLASS,'Produit');
+var_dump ($produits);
 
 require('inc/header.php');
-
 ?>
+
 
 <main class="container">
     <section class="row">
