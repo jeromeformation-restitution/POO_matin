@@ -1,8 +1,8 @@
 <?php
 
-require 'Classe/Produit.php';
+require 'autoloader.php';
 
-$hamac = new Produit;
+$hamac = new Produit; //myAutoloader ("Produit")
 $hamac->setName('Hamac');
 $hamac->setDescription('Pour se reposer après une semaine de PHP');
 $hamac->setImageName('hamac.jpg');
