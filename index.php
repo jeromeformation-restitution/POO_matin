@@ -1,11 +1,17 @@
 <?php
 require 'autoloader.php';
 
-$bdd = new PDO('mysql:host=localhost;dbname=catalogue2', 'root');
-$sql = 'SELECT * FROM produit WHERE publication_state = 1';
-$result = $bdd->query($sql);
-$produits = $result->fetchAll(PDO::FETCH_CLASS,'Produit');
-var_dump ($produits);
+//$bdd = new PDO('mysql:host=localhost;dbname=catalogue2', 'root');
+//$sql = 'SELECT * FROM produit WHERE publication_state = 1';
+//$result = $bdd->query($sql);
+//$produits = $result->fetchAll(PDO::FETCH_CLASS,'Produit');
+//var_dump ($produits);
+
+$database = new Database();
+$database->connect();
+$sql  = 'SELECT * FROM produit WHERE publication_state = 1';
+$produits = $database->query($sql,'Produit');
+
 
 require('inc/header.php');
 ?>
