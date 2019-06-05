@@ -5,7 +5,18 @@ require ('register_check.php');
 
 
 <main class="container">
-
+    <?php
+    if (isset($success) && $success === 1){
+    ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Hello <?= $user->getUserName() ?></strong> Bienvenue!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php
+    }
+?>
 
 <form method="post">
     <div class="form-group">

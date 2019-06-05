@@ -17,4 +17,9 @@ class Database
         $result = $query->fetchAll(PDO::FETCH_CLASS,$className);
         return $result;
     }
+    public function exec (string $sql):int
+    {
+        return $this->pdo->exec($sql);
+    }
+
 }
