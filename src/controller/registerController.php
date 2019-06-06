@@ -1,11 +1,11 @@
 <?php
 require dirname(__DIR__, 2) . '/autoloader.php';
-require dirname(__DIR__) . '/functions/form_function.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){//vérification du formulaire
-    $errorMessageUserName = checkPostText('name', 128);
-    $errorMessageUserEmail = checkPostText('email', 255);
-    $errorMessageUserPassword = checkPostText('password', 100);
+
+    $errorMessageUserName = FormValidator::checkPostText('name', 128);
+    $errorMessageUserEmail = FormValidator::checkPostText('email', 255);
+    $errorMessageUserPassword = FormValidator::checkPostText('password', 100);
 
     if (empty($errorMessageUserName)&& empty($errorMessageUserEmail)&& empty ($errorMessageUserPassword)){
         $database = new Database();

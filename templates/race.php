@@ -7,6 +7,8 @@ $vehicle->move(100);
 var_dump($vehicle);
 $vehicle->setBrand('mercedes');
 var_dump($vehicle);
+Cpt::setCompteur(0);
+echo (Cpt::getCompteur());
 ////Plane
 $airbus380 = new Plane('Airbus', 'Kérosène', 22);
 $airbus380->setMaxAlt(10000);
@@ -20,3 +22,12 @@ $garage->addVehicle($vehicle);
 $garage->addVehicle($airbus380);
 $garage->addVehicle($yatch);
 var_dump($garage);
+////compteur
+echo (Cpt::getCompteur());
+Cpt::setCompteur(1);
+echo (Cpt::getCompteur());
+Cpt::add();
+echo (Cpt::getCompteur());
+
+
+

@@ -16,6 +16,8 @@ class Garage
     public function addVehicle(Vehicle $vehicle)
     {
         $this->vehicle[] =$vehicle;
+
+
     }
 
     /**
