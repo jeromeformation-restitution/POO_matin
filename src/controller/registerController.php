@@ -1,6 +1,6 @@
 <?php
-require ('../autoloader.php');
-require ('form_function.php');
+require dirname(__DIR__, 2) . '/autoloader.php';
+require dirname(__DIR__) . '/functions/form_function.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){//vérification du formulaire
     $errorMessageUserName = checkPostText('name', 128);

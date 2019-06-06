@@ -1,8 +1,7 @@
 <?php
-require('../inc/header.php');
-require ('register_check.php');
+require('inc/header.php');
+require dirname(__DIR__) . '/src/controller/registerController.php';
 ?>
-
 
 <main class="container">
     <?php
@@ -40,5 +39,5 @@ require ('register_check.php');
 
 
 <?php
-require ('../inc/footer.php');
+require ('inc/footer.php');
 ?>
