@@ -1,6 +1,6 @@
 <?php
 
-
+namespace src\entities;
 class Produit
 {
   private $id;

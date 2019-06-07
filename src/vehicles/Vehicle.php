@@ -1,6 +1,9 @@
 <?php
 
 
+namespace src\vehicles;
+
+
 class Vehicle
 {
     /**

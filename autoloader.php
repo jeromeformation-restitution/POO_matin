@@ -2,6 +2,6 @@
 
 function myAutoloader(string $className):void
 {
-    require 'src/Classe/' . $className.'.php';
+    require $className.'.php';
 }
 spl_autoload_register('myAutoloader');

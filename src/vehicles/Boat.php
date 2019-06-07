@@ -1,5 +1,6 @@
 <?php
 
+namespace src\vehicles;
 
 class Boat extends Vehicle
 {

@@ -1,6 +1,10 @@
 <?php
 
 
+
+namespace src\vehicles;
+
+
 class Garage
 {
     /**

@@ -1,33 +1,22 @@
 <?php
+
+use src\vehicles\Car;
+use src\vehicles\Moto;
+use src\vehicles\Plane;
+use src\vehicles\SuperCopter;
+
 require dirname(__DIR__) . '/autoloader.php';
 
-$vehicle = new Vehicle('Renault', 'essence', 4);
-var_dump($vehicle);
-$vehicle->move(100);
-var_dump($vehicle);
-$vehicle->setBrand('mercedes');
-var_dump($vehicle);
-Cpt::setCompteur(0);
-echo (Cpt::getCompteur());
-////Plane
-$airbus380 = new Plane('Airbus', 'Kérosène', 22);
-$airbus380->setMaxAlt(10000);
-var_dump($airbus380);
-$airbus380->move(200);
-var_dump($airbus380);
-$yatch = new Boat('commander', 'essence', ['dunkerk','marsaille','Calais']);
-var_dump($yatch);
-$garage = new Garage();
-$garage->addVehicle($vehicle);
-$garage->addVehicle($airbus380);
-$garage->addVehicle($yatch);
-var_dump($garage);
-////compteur
-echo (Cpt::getCompteur());
-Cpt::setCompteur(1);
-echo (Cpt::getCompteur());
-Cpt::add();
-echo (Cpt::getCompteur());
+$plane=new Plane('airforceone','kerozene',4,10000);
+$plane->move(10000);
 
 
+$moto=new Moto('suzuki',"essence",2,900);
+$moto->move(50);
+$moto->move(50);
 
+$supercopter=new SuperCopter('ko',"essence",4,1900);
+$supercopter->move(50);
+
+$car=new Car('lamborgini bitcoin',"essence",4);
+$car->move(1);

@@ -1,7 +1,14 @@
 <?php
 
+namespace src\utilities;
+
+use PDO;
+
 class Database
 {
+    /**
+     * @var PDO
+     */
     private $pdo;
 
     public function connect(): void

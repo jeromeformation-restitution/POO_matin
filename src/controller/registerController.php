@@ -1,4 +1,9 @@
 <?php
+
+use src\entities\User;
+use src\utilities\Database;
+use src\utilities\FormValidator;
+
 require dirname(__DIR__, 2) . '/autoloader.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){//vérification du formulaire
